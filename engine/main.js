@@ -56,7 +56,7 @@ const loader = new GLTFLoader();
 
 //Load the file
 loader.load(
-  `./Engine/models/kroete/scene.gltf`,
+  `./engine/models/kroete/scene.gltf`,
   function (gltf) {
     //If the file is loaded, add it to the scene
     object = gltf.scene;
