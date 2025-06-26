@@ -27,11 +27,11 @@ function animate() {
   */
 
 //Import the THREE.js library
-import * as THREE from 'three';
+import * as THREE from 'https://cheborowska.de/three';
 // To allow for the camera to move around the scene
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { OrbitControls } from "https://cheborowska.de/three/examples/jsm/controls/OrbitControls.js";
 // To allow for importing the .gltf file
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { GLTFLoader } from "https://cheborowska.de/three/examples/jsm/loaders/GLTFLoader.js";
 
 //Create a Three.JS Scene
 const scene = new THREE.Scene();
