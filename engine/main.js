@@ -27,16 +27,20 @@ function animate() {
   */
 
 //Import the THREE.js library
-import * as THREE from './node_modules/three/build/three.module.js';
+import { Controls } from 'three';
+import * as THREE from '/node_modules/three/build/three.module.js';
 // To allow for the camera to move around the scene
-import { OrbitControls } from "./node_modules/three/examples/jsm/controls/OrbitControls.js";
+import { OrbitControls } from "/node_modules/three/examples/jsm/controls/OrbitControls.js";
 // To allow for importing the .gltf file
-import { GLTFLoader } from "./node_modules/three/examples/jsm/loaders/GLTFLoader.js";
+import { GLTFLoader } from "/node_modules/three/examples/jsm/loaders/GLTFLoader.js";
+
+/// <reference path='/node_modules/three/build/three.module.js' />
 
 //Create a Three.JS Scene
 const scene = new THREE.Scene();
 //create a new camera with positions and angles
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
 
 //Keep track of the mouse position, so we can make the eye move
 let mouseX = window.innerWidth / 2;
@@ -71,7 +75,7 @@ loader.load(
     console.error(error);
   }
 );
-
+THREE.PerspectiveCamera(fov, aspect, near, far)
 //Instantiate a new renderer and set its size
 const renderer = new THREE.WebGLRenderer({ alpha: true }); //Alpha: true allows for the transparent background
 renderer.setSize(window.innerWidth, window.innerHeight);
