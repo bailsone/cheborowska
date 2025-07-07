@@ -27,13 +27,12 @@ function animate() {
   */
 
 //Import the THREE.js library
-import { Controls } from 'three';
 import * as THREE from '/node_modules/three/build/three.module.js';
 // To allow for the camera to move around the scene
 import { OrbitControls } from "/node_modules/three/examples/jsm/controls/OrbitControls.js";
 // To allow for importing the .gltf file
 import { GLTFLoader } from "/node_modules/three/examples/jsm/loaders/GLTFLoader.js";
-import { MapControls, ThreeMFLoader } from 'three/examples/jsm/Addons.js';
+
 
 //Create a Three.JS Scene
 const scene = new THREE.Scene();
@@ -94,7 +93,6 @@ THREE.Scene
 THREE.PerspectiveCamera(fov, aspect, near, far)
 const ambientLight = new THREE.AmbientLight(0x333333, objToRender === "kroete" ? 5 : 1);
 scene.add(ambientLight);
-THREE.Quaternio
 //This adds controls to the camera, so we can rotate / zoom it with the mouse
 
 if (objToRender === "kroete") {
@@ -107,7 +105,6 @@ if (objToRender === "kroete") {
         controls.maxPolarAngle = Math.PI / 1.5; // Limit angle of visibility
         controls.maxDistance = 100.0;
         controls.minDistance = 50.0;
-        controls.ambientLight
         controls.keys = {
           LEFT: 37, //left arrow
           UP: 38, // up arrow
